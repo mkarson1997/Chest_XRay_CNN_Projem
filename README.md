@@ -53,7 +53,7 @@ Chest_XRay_CNN_Projem/
 │ └─ Chest_XRay_CNN_Projem.ipynb
 ├─ docs/
 │ └─ index.html
-├─ images/
+│ └─images
 │ ├─ normal.png
 │ ├─ pneumonia.png
 │ ├─ accuracy.png
