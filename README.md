@@ -1,4 +1,4 @@
-# Chest X-Ray Görüntülerinin CNN ile Sınıflandırılması (NORMAL vs PNEUMONIA)
+# Chest X-Ray Görüntülerinin CNN ile İkili Sınıflandırılması (NORMAL vs PNEUMONIA)
 
 **Öğrenci:** MAHMOUD KARZOUN  
 **No:** 251238003  
@@ -47,15 +47,18 @@ In this project, a **Convolutional Neural Network (CNN)** was built to classify 
 ---
 
 ## Dosya Yapısı / Repository Structure
-
-
-.Chest_XRay_CNN_Projem
+Chest_XRay_CNN_Projem/
 ├─ report.pdf
 ├─ notebook/
 │ └─ Chest_XRay_CNN_Projem.ipynb
 ├─ docs/
 │ └─ index.html
-├─ images
+├─ images/
+│ ├─ normal.png
+│ ├─ pneumonia.png
+│ ├─ accuracy.png
+│ ├─ loss.png
+│ └─ confusion_matrix.png
 └─ README.md
 
 
@@ -64,7 +67,7 @@ In this project, a **Convolutional Neural Network (CNN)** was built to classify 
 ## Nasıl Çalıştırılır? (Colab) / How to Run (Colab)
 
 1) Colab defterini aç:  
-- TR/EN: `COLAB_LINK`
+https://colab.research.google.com/drive/1QvDpyKWrpE22qfl4iTTptSRBUgG38PCZ
 
 2) Veri setini indir (kagglehub ile):  
 Defter içindeki ilgili hücreyi çalıştır (dataset otomatik iner).
@@ -85,13 +88,16 @@ Accuracy/Loss grafikleri + Confusion Matrix görüntülenir.
 ---
 
 ## Bağlantılar / Links
-- 📒 Colab Notebook: `[COLAB_LINK](https://colab.research.google.com/drive/1QvDpyKWrpE22qfl4iTTptSRBUgG38PCZ?usp=sharing)`
-- 📦 Drive (Tüm proje dosyaları): `[DRIVE_LINK](https://drive.google.com/drive/folders/1vNgznY5VEGaM7bJkusPOXPHcRzHzcEag?usp=sharing)`
-- 🧾 GitHub Repo: `[GITHUB_REPO_LINK](https://github.com/mkarson1997/Chest_XRay_CNN_Projem)`
-- 🌐 GitHub Pages: `[GITHUB_PAGES_LINK](https://mkarson1997.github.io/Chest_XRay_CNN_Projem/)`
+- 📒 Colab Notebook: https://colab.research.google.com/drive/1QvDpyKWrpE22qfl4iTTptSRBUgG38PCZ
+- 📦 Drive (Tüm proje dosyaları): https://drive.google.com/drive/folders/1vNgznY5VEGaM7bJkusPOXPHcRzHzcEag
+- 🧾 GitHub Repo: https://github.com/mkarson1997/Chest_XRay_CNN_Projem
+- 🌐 GitHub Pages: https://mkarson1997.github.io/Chest_XRay_CNN_Projem/
 
 ---
 
 ## Notlar
 - Doğrulama seti (val) çok küçük olduğu için val_accuracy dalgalanması normaldir.
 - Daha güçlü sonuçlar için Transfer Learning (MobileNetV2, DenseNet, ResNet) denenebilir.
+
+
+Bu proje üniversite dersi kapsamında akademik amaçlı hazırlanmıştır.
