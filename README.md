@@ -85,10 +85,10 @@ Accuracy/Loss grafikleri + Confusion Matrix görüntülenir.
 ---
 
 ## Bağlantılar / Links
-- 📒 Colab Notebook: `COLAB_LINK`
-- 📦 Drive (Tüm proje dosyaları): `DRIVE_LINK`
-- 🧾 GitHub Repo: `GITHUB_REPO_LINK`
-- 🌐 GitHub Pages: `GITHUB_PAGES_LINK`
+- 📒 Colab Notebook: `[COLAB_LINK](https://colab.research.google.com/drive/1QvDpyKWrpE22qfl4iTTptSRBUgG38PCZ?usp=sharing)`
+- 📦 Drive (Tüm proje dosyaları): `[DRIVE_LINK](https://drive.google.com/drive/folders/1vNgznY5VEGaM7bJkusPOXPHcRzHzcEag?usp=sharing)`
+- 🧾 GitHub Repo: `[GITHUB_REPO_LINK](https://github.com/mkarson1997/Chest_XRay_CNN_Projem)`
+- 🌐 GitHub Pages: `[GITHUB_PAGES_LINK](https://mkarson1997.github.io/Chest_XRay_CNN_Projem/)`
 
 ---
 
