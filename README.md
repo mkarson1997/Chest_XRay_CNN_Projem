@@ -53,6 +53,7 @@ Chest_XRay_CNN_Projem/
 │       └── confusion_matrix.png
 ├── report.pdf
 ├── MODEL_CARD.md
+├── EXPERIMENT_PROTOCOL.md
 └── README.md
 ```
 
@@ -77,7 +78,7 @@ Test evaluation
         └── confusion matrix
 ```
 
-## Reproduce the experiment
+## Reproduce the current experiment
 
 Open the notebook in Google Colab:
 
@@ -88,6 +89,8 @@ The notebook contains the dataset-loading, model-definition, training and evalua
 Dataset source:
 
 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+
+For new experiments, use [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md). It defines the expected split metadata, random seeds, preprocessing record, training configuration, metrics and baseline comparisons so future results are comparable rather than one-off notebook runs.
 
 ## Evaluation notes
 
@@ -112,7 +115,8 @@ The repository includes visual evaluation artifacts such as training curves and 
 - tracking training and validation behavior,
 - evaluating predictions with scikit-learn,
 - communicating results through plots and a technical report,
-- documenting model limitations responsibly.
+- documenting model limitations responsibly,
+- defining a reproducible experiment protocol before comparing new models.
 
 ## Limitations
 
@@ -127,11 +131,19 @@ For the full statement, see [MODEL_CARD.md](MODEL_CARD.md).
 
 - Create a larger stratified validation split
 - Add precision, recall, F1 and ROC-AUC reporting
-- Add fixed random seeds and reproducibility metadata
+- Apply the documented fixed-seed experiment protocol
 - Compare transfer-learning baselines such as MobileNetV2, DenseNet and ResNet
 - Add confidence intervals and calibration analysis
 - Add an experiment configuration file
 - Add lightweight automated notebook/data validation
+
+## Engineering workflow
+
+- [MODEL_CARD.md](MODEL_CARD.md) documents intended use and limitations.
+- [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md) defines reproducibility requirements for future runs.
+- `SECURITY.md` documents responsible reporting/use boundaries.
+- `CONTRIBUTING.md` and the pull-request checklist define contribution expectations.
+- The open experiment issue tracks the next reproducibility/baseline milestone.
 
 ## Links
 
