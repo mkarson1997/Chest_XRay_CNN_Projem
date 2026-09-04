@@ -1,5 +1,7 @@
 # Chest X-Ray CNN Classification
 
+[![ML Portfolio Quality](https://github.com/mkarson1997/Chest_XRay_CNN_Projem/actions/workflows/quality.yml/badge.svg)](https://github.com/mkarson1997/Chest_XRay_CNN_Projem/actions/workflows/quality.yml)
+
 An educational deep-learning project for binary chest X-ray image classification: `NORMAL` vs `PNEUMONIA`.
 
 The repository demonstrates an end-to-end applied ML workflow including dataset preparation, CNN training, evaluation, metric visualization and confusion-matrix analysis.
@@ -41,8 +43,11 @@ The validation split is extremely small, so validation metrics should be interpr
 
 ```text
 Chest_XRay_CNN_Projem/
+├── .github/workflows/quality.yml
 ├── notebook/
 │   └── Chest_XRay_CNN_Projem.ipynb
+├── scripts/
+│   └── validate_project.py
 ├── docs/
 │   ├── index.html
 │   └── images/
@@ -54,6 +59,10 @@ Chest_XRay_CNN_Projem/
 ├── report.pdf
 ├── MODEL_CARD.md
 ├── EXPERIMENT_PROTOCOL.md
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── THIRD_PARTY_NOTICES.md
 └── README.md
 ```
 
@@ -92,6 +101,27 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 For new experiments, use [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md). It defines the expected split metadata, random seeds, preprocessing record, training configuration, metrics and baseline comparisons so future results are comparable rather than one-off notebook runs.
 
+## Repository quality gate
+
+The CI workflow intentionally avoids retraining a GPU model on every documentation change. Instead, it enforces a fast reproducibility/portfolio gate that runs on pushes and pull requests.
+
+Run locally:
+
+```bash
+python scripts/validate_project.py
+```
+
+The validator checks that:
+
+- the tracked Jupyter notebook exists and is valid JSON,
+- the notebook uses a supported notebook format,
+- it contains both executable code cells and explanatory Markdown cells,
+- the Model Card and Experiment Protocol are present,
+- security and contribution documentation is present,
+- open-source licensing and third-party notices are present.
+
+The latest GitHub Actions run for this quality gate is passing. Model training remains an explicit experiment step rather than a misleading lightweight CI substitute.
+
 ## Evaluation notes
 
 The recorded test accuracy is approximately `0.8365`.
@@ -116,7 +146,8 @@ The repository includes visual evaluation artifacts such as training curves and 
 - evaluating predictions with scikit-learn,
 - communicating results through plots and a technical report,
 - documenting model limitations responsibly,
-- defining a reproducible experiment protocol before comparing new models.
+- defining a reproducible experiment protocol before comparing new models,
+- maintaining a fast CI quality gate for notebook/documentation integrity.
 
 ## Limitations
 
@@ -135,7 +166,7 @@ For the full statement, see [MODEL_CARD.md](MODEL_CARD.md).
 - Compare transfer-learning baselines such as MobileNetV2, DenseNet and ResNet
 - Add confidence intervals and calibration analysis
 - Add an experiment configuration file
-- Add lightweight automated notebook/data validation
+- Add lightweight schema checks for exported experiment results
 
 ## Engineering workflow
 
@@ -143,7 +174,9 @@ For the full statement, see [MODEL_CARD.md](MODEL_CARD.md).
 - [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md) defines reproducibility requirements for future runs.
 - `SECURITY.md` documents responsible reporting/use boundaries.
 - `CONTRIBUTING.md` and the pull-request checklist define contribution expectations.
-- The open experiment issue tracks the next reproducibility/baseline milestone.
+- `LICENSE` covers project-authored source; `THIRD_PARTY_NOTICES.md` separates dataset/dependency rights.
+- `.github/workflows/quality.yml` keeps the repository-quality gate green and repeatable.
+- The open experiment issue tracks the next actual model-evaluation/baseline milestone.
 
 ## Links
 
